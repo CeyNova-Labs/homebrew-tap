@@ -1,12 +1,19 @@
 class CeynoxWatch < Formula
   desc "See what a command really does: programs, network, credentials touched"
   homepage "https://github.com/CeyNova-Labs/ceynox-watch"
-  version "0.1.0"
   license "Apache-2.0"
 
+  # The macOS archive holds one universal binary, so both architectures
+  # point at the same file.
   on_macos do
-    url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.1.0/ceynox-watch-0.1.0-macos-universal.tar.gz"
-    sha256 "f19a606c23642c3fa1fdfeb7b37091c54b44556c8572310ff57f43281afebc80"
+    on_arm do
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.1.0/ceynox-watch-0.1.0-macos-universal.tar.gz"
+      sha256 "f19a606c23642c3fa1fdfeb7b37091c54b44556c8572310ff57f43281afebc80"
+    end
+    on_intel do
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.1.0/ceynox-watch-0.1.0-macos-universal.tar.gz"
+      sha256 "f19a606c23642c3fa1fdfeb7b37091c54b44556c8572310ff57f43281afebc80"
+    end
   end
 
   on_linux do
