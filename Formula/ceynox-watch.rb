@@ -7,28 +7,30 @@ class CeynoxWatch < Formula
   # point at the same file.
   on_macos do
     on_arm do
-      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.1.0/ceynox-watch-0.1.0-macos-universal.tar.gz"
-      sha256 "f19a606c23642c3fa1fdfeb7b37091c54b44556c8572310ff57f43281afebc80"
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.1/ceynox-watch-0.2.1-macos-universal.tar.gz"
+      sha256 "2dd1a31b78208d49188fcd7b173ce008410a9a9c4fccba7592ab1749f07d7f7d"
     end
     on_intel do
-      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.1.0/ceynox-watch-0.1.0-macos-universal.tar.gz"
-      sha256 "f19a606c23642c3fa1fdfeb7b37091c54b44556c8572310ff57f43281afebc80"
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.1/ceynox-watch-0.2.1-macos-universal.tar.gz"
+      sha256 "2dd1a31b78208d49188fcd7b173ce008410a9a9c4fccba7592ab1749f07d7f7d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.1.0/ceynox-watch-0.1.0-linux-aarch64.tar.gz"
-      sha256 "b02773021aaeceb85eaa99272182d527aba242ad34f405195dcc188531a42eb4"
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.1/ceynox-watch-0.2.1-linux-aarch64.tar.gz"
+      sha256 "d29ec2039fcd849fe3a2279ab2b5ce96105c8a11fafb016922aaa15c585ad9ba"
     end
     on_intel do
-      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.1.0/ceynox-watch-0.1.0-linux-x86_64.tar.gz"
-      sha256 "3fdcba511725d7b5a5325b5fb8debb1edb78fae0fa9f0a449c7d1616437bf38a"
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.1/ceynox-watch-0.2.1-linux-x86_64.tar.gz"
+      sha256 "b53751139be185afa5fd008a46b29c2b39a3a9523e8ff853f92daaa101d5a516"
     end
   end
 
   def install
     bin.install "ceynox-watch"
+    # On macOS, the Linux builds that --inspect runs inside its container.
+    libexec.install Dir["libexec/*"] if Dir.exist?("libexec")
   end
 
   test do
