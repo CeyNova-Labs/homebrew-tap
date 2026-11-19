@@ -7,23 +7,23 @@ class CeynoxWatch < Formula
   # point at the same file.
   on_macos do
     on_arm do
-      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.1/ceynox-watch-0.2.1-macos-universal.tar.gz"
-      sha256 "2dd1a31b78208d49188fcd7b173ce008410a9a9c4fccba7592ab1749f07d7f7d"
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.2/ceynox-watch-0.2.2-macos-universal.tar.gz"
+      sha256 "4e713e461c152470123f88515aba5ab16b4769becfdfea9f89d5efd9da0ebfe4"
     end
     on_intel do
-      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.1/ceynox-watch-0.2.1-macos-universal.tar.gz"
-      sha256 "2dd1a31b78208d49188fcd7b173ce008410a9a9c4fccba7592ab1749f07d7f7d"
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.2/ceynox-watch-0.2.2-macos-universal.tar.gz"
+      sha256 "4e713e461c152470123f88515aba5ab16b4769becfdfea9f89d5efd9da0ebfe4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.1/ceynox-watch-0.2.1-linux-aarch64.tar.gz"
-      sha256 "d29ec2039fcd849fe3a2279ab2b5ce96105c8a11fafb016922aaa15c585ad9ba"
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.2/ceynox-watch-0.2.2-linux-aarch64.tar.gz"
+      sha256 "d457ba0d9bc5fd4e9821dc77b5d247c11406ca20266c447b0a5a63e3802a8a2e"
     end
     on_intel do
-      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.1/ceynox-watch-0.2.1-linux-x86_64.tar.gz"
-      sha256 "b53751139be185afa5fd008a46b29c2b39a3a9523e8ff853f92daaa101d5a516"
+      url "https://github.com/CeyNova-Labs/ceynox-watch/releases/download/v0.2.2/ceynox-watch-0.2.2-linux-x86_64.tar.gz"
+      sha256 "23f74c9bd5d8a022f921686954b564bf01b772767ea0af990570a37db077239f"
     end
   end
 
